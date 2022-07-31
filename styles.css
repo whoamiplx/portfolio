@@ -104,17 +104,24 @@
     background: none;
 }
 
-/*Similar Content Styles*/
+/*Similar Styles*/
 section{
     padding: 100px 0;
+}
+.about, .services, .skills{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.about .about-content,
+.services .servs-content, .skills .skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*About Section Styles*/
 .about{
     background:lemonchiffon;
-}
-.about, .services{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .about .title{
     position: relative;
@@ -125,13 +132,6 @@ section{
     padding-bottom: 65px;
     font-family: sans-serif;
     text-decoration: underline;
-}
-.about .about-content,
-.services .servs-content{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
 }
 .about .about-content .column-left{
     width: 45%;
@@ -175,8 +175,8 @@ section{
 
 /*Services Styling*/
 .services{
-    background: black;
-    color: #fff;
+    background: #111;
+    color: lemonchiffon;
 
 }
 .services .title{
@@ -194,13 +194,71 @@ section{
     background: rebeccapurple;
     text-align: center;
     border-radius: 6px;
-    padding: 20px 25px;
+    padding: 35px 35px;
     cursor: pointer;
+    transition: all .3s ease;
+}
+.services .servs-content .card:hover{
+    background: lemonchiffon}
+.services .servs-content .card .box{
+    transition: all .3s ease;
+}.services .servs-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .servs-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    text-decoration: underline;
+    color: #111;
+}
+.services .servs-content .box p{
+    color: #111;
+    font-weight: 400;
 }
 
-
-
-
+/*Skills stylings start here*/
+.skills{
+    background: lemonchiffon;
+}
+.skills .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 65px;
+    font-family: sans-serif;
+    text-decoration: underline;
+}
+.skills .skills-content .left{
+    width: calc(50% - 30px);
+}
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+.skills .skills-content .right .bars .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right span{
+    font-weight: 500;
+    font-size: 15px;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightslategray;
+}
+.skills .skills-content .bars .line{
+    
+}
 
 
 
